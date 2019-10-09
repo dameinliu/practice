@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<script src="js/jquery-3.4.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<title>模态框练习</title>
+	<style>
+	</style>
+	<script>
+		$(function(){
+			$('#btn01').click(function(){
+				$('#modal02').modal({
+					show: true,
+					backdrop: 'static'
+				})
+			})
+
+			$('#shutoff').click(function(){
+				$('#modal02').modal('hide')
+			})
+		})
+	</script>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<button class="btn btn-primary" data-toggle="modal" data-target="#modal01">弹出模态框</button>
+		<button class="btn btn-primary" id="btn01">JS控制弹框</button>
+	</div>
+</div>
+
+<!-- 模态框代码 -->
+<!-- .modal>.modal-dialog>.modal-content>.modal-header+.modal-body+.modal-footer -->
+<div class="modal fade" id="modal01">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">提示弹框</div>
+			<div class="modal-body"><p>弹框文字内容</p></div>
+			<div class="modal-footer">
+				<button class="btn btn-primary">确定</button>
+				<button class="btn btn-default" data-dismiss="modal">取消</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- JS控制弹框 -->
+<div class="modal fade" id="modal02">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">提示弹框</div>
+			<div class="modal-body"><p>弹框文字内容</p></div>
+			<div class="modal-footer">
+				<button class="btn btn-primary" id="shutoff">确定</button>
+				<button class="btn btn-default" >取消</button>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/jquery-3.4.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<title>Bootstrap</title>
+	<style>
+		div[class*='col-']{
+			background-color: gold;
+			border: 1px solid #000;
+			height: 50px;
+		}
+		.box{
+			height:100px;
+			background-color: cyan;
+			border: 1px solid #000;
+			margin: 20px 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<h1>按钮组</h1>	
+		</div>
+	</div>
+<div class="container">
+	<div class="row">
+		<div class="btn-group btn-group-justified">
+			<div class="btn-group"><input type="button" value="按钮" class="btn btn-primary"></div>
+			<div class="btn-group"><input type="button" value="按钮" class="btn btn-default"></div>
+			<div class="btn-group"><input type="button" value="按钮" class="btn btn-default"></div>
+		</div>
+	</div>
+	<hr>
+	<!-- 
+	<div class="row">
+		<div class="btn-group btn-group-justified">
+			<input type="button" value="按钮" class="btn btn-primary">
+			<input type="button" value="按钮" class="btn btn-default">
+			<input type="button" value="按钮" class="btn btn-default">
+		</div>
+	</div>
+	 -->
+ <div class="btn-group btn-group-justified">
+ 	<a href="#" class="btn btn-primary">按钮</a>
+ 	<a href="#" class="btn btn-default">按钮</a>
+ 	<a href="#" class="btn btn-default">按钮</a>
+ </div>
+ <hr>
+ <form action="">
+ 	<div class="input-group">
+ 		<span class="input-group-addon">@</span>
+ 		<input type="text" class="form-control">
+ 	</div>
+ </form>
+ <hr>
+<form action="">
+ 	<div class="input-group">
+ 		<input type="text" class="form-control">
+ 		<span class="input-group-btn">
+ 			<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+ 		</span>
+ 	</div>
+ </form>
+</div>
+</body>
+</html>
