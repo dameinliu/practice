@@ -1,0 +1,116 @@
+1572526158473	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile59iI0I"
+1572526159099	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1572526159099	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1572526159099	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1572526159100	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd64 v= and igd10iumd64 v=
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd64 v= and igd10iumd64 v=
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd64 v= and igd10iumd64 v=
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd64 v= and igd10iumd64 v=
+1572526161645	Marionette	INFO	Listening on port 10250
+1572526161732	Marionette	WARN	TLS certificate errors will be ignored for this session
+1572526168088	Marionette	INFO	Stopped listening on port 10250
+[Child 8828, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8828, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9232, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9232, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[Child 4576, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4576, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1572530357441	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofilem18IDM"
+1572530359146	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1572530359146	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1572530359147	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1572530359147	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd64 v= and igd10iumd64 v=
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd64 v= and igd10iumd64 v=
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd64 v= and igd10iumd64 v=
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd64 v= and igd10iumd64 v=
+1572530362206	Marionette	INFO	Listening on port 12051
+1572530362468	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 10912, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10912, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3568, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3568, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10596, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10596, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1572530769206	Marionette	INFO	Stopped listening on port 12051
+ and igd10iumd64 v=
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd64 v= and igd10iumd64 v=
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd64 v= and igd10iumd64 v=
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd64 v= and igd10iumd64 v=
+1572530699190	Marionette	INFO	Listening on port 12492
+1572530699431	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 2768, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6700, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6700, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9240, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9240, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1340, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1340, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1572530772503	Marionette	INFO	Stopped listening on port 12492
+4 v= and igd10iumd64 v=
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd64 v= and igd10iumd64 v=
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd64 v= and igd10iumd64 v=
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd64 v= and igd10iumd64 v=
+1572530755845	Marionette	INFO	Listening on port 12617
+1572530755994	Marionette	WARN	TLS certificate errors will be ignored for this session
+1572530759156	Marionette	INFO	Stopped listening on port 12617
+[Child 10304, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4728, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4728, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrom[Child 7076, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7076, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1572531221419	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofileGjwVuC"
+1572531223388	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1572531223388	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1572531223388	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1572531223389	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd64 v= and igd10iumd64 v=
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd64 v= and igd10iumd64 v=
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd64 v= and igd10iumd64 v=
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd64 v= and igd10iumd64 v=
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1572531226382	Marionette	INFO	Listening on port 13268
+1572531226463	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd64 v= and igd10iumd64 v=
+1572531230728	Marionette	INFO	Stopped listening on port 13268
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+[Parent 11948, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11980, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11980, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 11948, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 11948, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11652, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[[Child 3288, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3288, Chrome_ChildThread] WARNING[Child 9472, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9472, Chrome1572531763841	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofileMZgHbQ"
+*** You are running in headless mode.
+1572531764426	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1572531764427	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1572531764427	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1572531764427	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd64 v= and igd10iumd64 v=
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd64 v= and igd10iumd64 v=
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd64 v= and igd10iumd64 v=
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd64 v= and igd10iumd64 v=
+1572531766737	Marionette	INFO	Listening on port 13930
+1572531767165	Marionette	WARN	TLS certificate errors will be ignored for this session
+1572531770720	Marionette	INFO	Stopped listening on port 13930
+[Child 10908, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10908, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 2504, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 2504, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1571244707/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341

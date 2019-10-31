@@ -1,8 +1,8 @@
 # 本地Chrome浏览器设置方法
-from selenium import  webdriver 
+from selenium import  webdriver
 import time
 
-driver = webdriver.Chrome() 
+driver = webdriver.Firefox(executable_path=r'C:\Program Files\Mozilla Firefox\geckodriver.exe')
 driver.get('https://localprod.pandateacher.com/python-manuscript/hello-spiderman/') 
 time.sleep(2)
 
