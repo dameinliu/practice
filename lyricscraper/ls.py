@@ -1,12 +1,14 @@
-import requests, json, re, os
+import requests, json, re, os, sys
 from bs4 import BeautifulSoup
 
 headers = {
-'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36'
+'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36',
+"Refer":"http://music.163.com/",
+"Host":"music.163.com"
 }
 
 # 根据歌手id获取前50首热门作品
-def get_songs_by_singer_id(singer_id):
+def get_songs_by_singer_id(singer_id, trans):
     singer_url = 'http://music.163.com/artist?id=' + str(singer_id)  # 获取歌手链接，根据歌手的id获取数据
     web_data = requests.get(singer_url, headers=headers)
 
@@ -30,8 +32,8 @@ def get_songs_by_singer_id(singer_id):
         os.makedirs(path)
 
     for i in music_id_set:
-        f=open(path+"/"+dic[i]+".txt",'w')
-        lyric = get_lyric_by_music_id(i)#获取某一首歌的歌词
+        f=open(path+"/"+dic[i]+".txt",'a', encoding='utf-8')
+        lyric = get_lyric_by_music_id(i, trans)#获取某一首歌的歌词
         if lyric==None:
             print("No lyric")
             continue
@@ -46,7 +48,7 @@ def get_songs_by_singer_id(singer_id):
         f.close()
 
 # 根据专辑id获取专辑歌词
-def get_songs_by_album_id(album_id):
+def get_songs_by_album_id(album_id, trans):
     album_url = 'http://music.163.com/album?id=' + str(album_id)  # 获取歌手链接，根据歌手的id获取数据
     web_data = requests.get(album_url, headers=headers)
 
@@ -76,13 +78,13 @@ def get_songs_by_album_id(album_id):
     # lambda表达式，通常是在需要一个函数，但是又不想费神去命名一个函数的场合下使用，也就是指匿名函数。例：
     #--- add = lambda x, y : x+y
     #--- add(1,2)  # 结果为3
-    path = "D:/lyrics/"+album_name
+    path = "E:/lyrics/"+album_name
     if not os.path.exists(path):
         os.makedirs(path)
 
     for i in music_id_set:
         f=open(path+"/"+dic[i]+".txt",'w')
-        lyric = get_lyric_by_music_id(i)#获取某一首歌的歌词
+        lyric = get_lyric_by_music_id(i, trans)#获取某一首歌的歌词
         if lyric==None:
             print("No lyric")
             continue
@@ -98,22 +100,45 @@ def get_songs_by_album_id(album_id):
 
 
 #根据歌词id提取单首歌词
-def get_lyric_by_music_id(music_id):
+def get_lyric_by_music_id(music_id, trans):
     lrc_url = 'http://music.163.com/api/song/lyric?' + 'id=' + str(music_id) + '&lv=1&kv=1&tv=-1'
 
     lyric = requests.get(lrc_url, headers=headers)
     json_obj = lyric.text
     j = json.loads(json_obj) #json对象转化为python对象，dumps将python对象转化为json对象
 
-    try:
-        # 部分歌曲没有歌词，这里引入一个异常
-        lrc = j['lrc']['lyric']
-        lrc = re.sub(re.compile(r'\[.*\]'), "", lrc).strip()
-        return lrc
-    except KeyError as e:
-        pass
+    if trans==1:
+        # 获取外语歌词翻译
+        try:
+            # 部分歌曲没有歌词，这里引入一个异常
+            lrc = j['tlyric']['lyric']
+            lrc = re.sub(re.compile(r'\[.*\]'), "", lrc).strip()
+            return lrc
+        except KeyError as e:
+            pass
+    else:
+        try:
+            # 部分歌曲没有歌词，这里引入一个异常
+            lrc = j['lrc']['lyric']
+            lrc = re.sub(re.compile(r'\[.*\]'), "", lrc).strip()
+            return lrc
+        except KeyError as e:
+            pass
+
+def get_lyrics(cate, cate_id, trans):
+    if cate == "album":
+        get_songs_by_album_id(cate_id, trans)
+    elif cate == 'singer':
+        get_songs_by_singer_id(cate_id, trans)
+    else:
+        print("请指定获取类型")
 
 if __name__ == '__main__':
-    # get_songs_by_singer_id('6452')
-    get_songs_by_album_id('14529')
-    # get_lyric_by_music_id()
+    try:
+        cate = sys.argv[1]
+        cate_id = sys.argv[2]
+        trans = sys.argv[3]
+        get_lyrics(cate, cate_id, trans)
+    except Exception as e:
+        print(sys.argv)
+        print(e)
