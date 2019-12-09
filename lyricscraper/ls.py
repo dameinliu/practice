@@ -14,7 +14,7 @@ def get_songs_by_singer_id(singer_id, trans):
 
     soup = BeautifulSoup(web_data.text, 'lxml')
 
-    singer_name = soup.select("#artist-name")#获取歌手名字
+    singer_name = soup.select("#artist-name")[0].text#获取歌手名字
     r = list(soup.find('ul', {'class': 'f-hide'}).find_all('a'))
     music_id_set = []#此歌手音乐的id列表
     music_name_set=[]#此歌手音乐的名字列表
@@ -98,7 +98,6 @@ def get_songs_by_album_id(album_id, trans):
                 continue
         f.close()
 
-
 #根据歌词id提取单首歌词
 def get_lyric_by_music_id(music_id, trans):
     lrc_url = 'http://music.163.com/api/song/lyric?' + 'id=' + str(music_id) + '&lv=1&kv=1&tv=-1'
@@ -128,7 +127,7 @@ def get_lyric_by_music_id(music_id, trans):
 def get_lyrics(cate, cate_id, trans):
     if cate == "album":
         get_songs_by_album_id(cate_id, trans)
-    elif cate == 'singer':
+    elif cate == "artist":
         get_songs_by_singer_id(cate_id, trans)
     else:
         print("请指定获取类型")
