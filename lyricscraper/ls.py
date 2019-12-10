@@ -7,6 +7,11 @@ headers = {
 "Host":"music.163.com"
 }
 
+def validateName(name):
+  rstr = r"[\/\\\:\*\?\"\<\>\|]" # '/ \ : * ? " < > |'
+  new_name = re.sub(rstr, "_", name) # 替换为下划线
+  return new_name
+
 # 根据歌手id获取前50首热门作品
 def get_songs_by_singer_id(singer_id, trans):
     singer_url = 'http://music.163.com/artist?id=' + str(singer_id)  # 获取歌手链接，根据歌手的id获取数据
@@ -27,12 +32,12 @@ def get_songs_by_singer_id(singer_id, trans):
     
     dic = dict(map(lambda x, y: [x, y],  music_id_set,music_name_set))  # 将音乐名字和音乐id组成一个字典
 
-    path = "E:/lyrics/"+singer_name
+    path = "E:/lyrics/"+validateName(singer_name)
     if not os.path.exists(path):
         os.makedirs(path)
 
     for i in music_id_set:
-        f=open(path+"/"+dic[i]+".txt",'a', encoding='utf-8')
+        f=open(path+"/"+singer_name+"_"+validateName(dic[i])+".txt",'a', encoding='utf-8')
         lyric = get_lyric_by_music_id(i, trans)#获取某一首歌的歌词
         if lyric==None:
             print("No lyric")
@@ -78,12 +83,12 @@ def get_songs_by_album_id(album_id, trans):
     # lambda表达式，通常是在需要一个函数，但是又不想费神去命名一个函数的场合下使用，也就是指匿名函数。例：
     #--- add = lambda x, y : x+y
     #--- add(1,2)  # 结果为3
-    path = "E:/lyrics/"+album_name
+    path = "E:/lyrics/"+validateName(album_name)
     if not os.path.exists(path):
         os.makedirs(path)
 
     for i in music_id_set:
-        f=open(path+"/"+dic[i]+".txt",'w')
+        f=open(path+"/"+album_name+"_"+validateName(dic[i])+".txt",'w')
         lyric = get_lyric_by_music_id(i, trans)#获取某一首歌的歌词
         if lyric==None:
             print("No lyric")
