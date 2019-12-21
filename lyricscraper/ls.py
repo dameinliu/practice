@@ -115,8 +115,10 @@ def get_lyric_by_music_id(music_id, trans):
         # 获取外语歌词翻译
         try:
             # 部分歌曲没有歌词，这里引入一个异常
-            lrc = j['tlyric']['lyric']
+            lrc = j['lyric']['lyric']
+            tlrc = j['tlyric']['lyric']
             lrc = re.sub(re.compile(r'\[.*\]'), "", lrc).strip()
+            tlrc = re.sub(re.compile(r'\[.*\]'), "", tlrc).strip()
             return lrc
         except KeyError as e:
             pass
