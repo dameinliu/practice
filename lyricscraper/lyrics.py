@@ -10,10 +10,42 @@ with open(r'feel like summer.txt','r', encoding = 'utf-8') as file_open:
     pat = re.compile(r'\[.*\]')
 
     lyrics = []
+    tlyrics = []
+    # print(lrc)
+    ### 原版歌词
     for i in lrc:
-    	j = {'time': re.findall(pat,i)[0]}
-    	lyrics.append(j)
+        try:
+            if len(re.findall(pat,i)) > 0:
+                time = re.findall(pat,i)[0]
+                ly = {'time':time, 'lyrics':re.sub(pat,"",i)}
+                lyrics.append(ly)
+            else:
+                pass
+        except KeyError as e:
+            pass
+    ### 翻译版歌词
+    for i in tlrc:
+        try:
+            if len(re.findall(pat,i)) > 0:
+                time = re.findall(pat,i)[0]
+                ly = {'time':time, 'lyrics':re.sub(pat,"",i)}
+                tlyrics.append(ly)
+            else:
+                pass
+        except KeyError as e:
+            pass
+
     	# print(re.sub(re.compile(r'\[.*\]'),"",i).strip())
+
+    ### 组合歌词
+    ### flyric是一个包含歌词和翻译歌词对应的列表
+    flyrics = []
+    for i in lyrics:
+        for j in tlyrics:
+            if i['time'] == j['time']:
+                ly = {'lyrics':i['lyrics'], 'tlyrics':j['lyrics']}
+                flyrics.append(ly)
+
 
 
 

@@ -12,7 +12,7 @@ def validateName(name):
   new_name = re.sub(rstr, "_", name) # 替换为下划线
   return new_name
 
-# 根据歌手id获取前50首热门作品
+### 根据歌手id获取前50首热门作品
 def get_songs_by_singer_id(singer_id, trans):
     singer_url = 'http://music.163.com/artist?id=' + str(singer_id)  # 获取歌手链接，根据歌手的id获取数据
     web_data = requests.get(singer_url, headers=headers)
@@ -52,7 +52,7 @@ def get_songs_by_singer_id(singer_id, trans):
                 continue
         f.close()
 
-# 根据专辑id获取专辑歌词
+### 根据专辑id获取专辑歌词
 def get_songs_by_album_id(album_id, trans):
     album_url = 'http://music.163.com/album?id=' + str(album_id)  # 获取歌手链接，根据歌手的id获取数据
     web_data = requests.get(album_url, headers=headers)
@@ -103,7 +103,7 @@ def get_songs_by_album_id(album_id, trans):
                 continue
         f.close()
 
-#根据歌词id提取单首歌词
+### 根据歌词id提取单首歌词
 def get_lyric_by_music_id(music_id, trans):
     lrc_url = 'http://music.163.com/api/song/lyric?' + 'id=' + str(music_id) + '&lv=1&kv=1&tv=-1'
 
@@ -111,17 +111,49 @@ def get_lyric_by_music_id(music_id, trans):
     json_obj = lyric.text
     j = json.loads(json_obj) #json对象转化为python对象，dumps将python对象转化为json对象
 
-    if trans==1:
-        # 获取外语歌词翻译
-        try:
-            # 部分歌曲没有歌词，这里引入一个异常
-            lrc = j['lyric']['lyric']
-            tlrc = j['tlyric']['lyric']
+    if trans=="1":
+        lrc = j['lrc']['lyric']
+        tlrc = j['tlyric']['lyric']
+        pat = re.compile(r'\[.*\]')
+        if tlrc is None:
             lrc = re.sub(re.compile(r'\[.*\]'), "", lrc).strip()
-            tlrc = re.sub(re.compile(r'\[.*\]'), "", tlrc).strip()
             return lrc
-        except KeyError as e:
-            pass
+        else:
+            lrc = lrc.split('\n')
+            tlrc = tlrc.split('\n')
+            lyrics = []
+            tlyrics = []
+            for i in lrc:
+                try:
+                    if len(re.findall(pat,i)) > 0:
+                        time = re.findall(pat,i)[0]
+                        ly = {'time':time, 'lyrics':re.sub(pat,"",i)}
+                        lyrics.append(ly)
+                    else:
+                        pass
+                except KeyError as e:
+                    pass
+            ### 翻译版歌词
+            for i in tlrc:
+                try:
+                    if len(re.findall(pat,i)) > 0:
+                        time = re.findall(pat,i)[0]
+                        ly = {'time':time, 'lyrics':re.sub(pat,"",i)}
+                        tlyrics.append(ly)
+                    else:
+                        pass
+                except KeyError as e:
+                    pass
+            flyrics = []
+            for i in lyrics:
+                for j in tlyrics:
+                    if i['time'] == j['time']:
+                        ly = {'lyrics':i['lyrics'], 'tlyrics':j['lyrics']}
+                        flyrics.append(ly)
+            lrc=""
+            for i in flyrics:
+                lrc=lrc+'\n'+i['lyrics']+'\n'+i['tlyrics']
+            return lrc
     else:
         try:
             # 部分歌曲没有歌词，这里引入一个异常
@@ -139,6 +171,7 @@ def get_lyrics(cate, cate_id, trans):
     else:
         print("请指定获取类型")
 
+### 命令行交互，1.爬取类型[album, artist] 2.id[专辑或歌手id] 3.是否爬取翻译版本
 if __name__ == '__main__':
     try:
         cate = sys.argv[1]
