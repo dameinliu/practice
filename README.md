@@ -1,2 +1,2 @@
-# practice
-这个git存放我所有的练习项目
+Hi, there, 
+This repository is my practice projects~ I hope you can find some inspiration in this repository~ :)
